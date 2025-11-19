@@ -169,9 +169,9 @@ void loop() {
         Serial.print("[!!! POSSIBLE GEOMAGNETIC STORM !!!]");
         currentDetectionLevel = "Storm";
         stormDetected = true;
-      } else if (deviationX > max(stdDevX * 5, 1.0) || 
-        deviationY > max(stdDevY * 5, 1.0) || 
-        deviationZ > max(stdDevZ * 5, 1.0)) {
+      } else if (deviationX > max(stdDevX * 5, 1.0f) || 
+        deviationY > max(stdDevY * 5, 1.0f) || 
+        deviationZ > max(stdDevZ * 5, 1.0f)) {
         Serial.print("[! High Deviation Detected !]");
         currentDetectionLevel = "High Deviation";
         stormDetected = true;
